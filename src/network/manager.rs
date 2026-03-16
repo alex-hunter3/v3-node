@@ -130,10 +130,10 @@ impl PeerManagerHandle {
             .map_err(|_| AppError::Network("peer list reply channel dropped".into()))
     }
 
-    /// Number of currently connected peers.
-    pub async fn peer_count(&self) -> Result<usize, AppError> {
-        Ok(self.connected_peers().await?.len())
-    }
+    // / Number of currently connected peers.
+    // pub async fn peer_count(&self) -> Result<usize, AppError> {
+    //     Ok(self.connected_peers().await?.len())
+    // }
 }
 
 // ─── PeerManager (actor) ─────────────────────────────────────────────────────
@@ -141,7 +141,6 @@ impl PeerManagerHandle {
 pub struct PeerManager {
     peers: HashMap<PeerId, Peer>,
     rr_index: usize,
-    /// `event_listener()` returns `EventStream<NetworkEvent<PeerRequest<N>>>`.
     events: EventStream<NetworkEvent<PeerRequest<EthNetworkPrimitives>>>,
     cmd_rx: mpsc::Receiver<Command>,
     event_tx: broadcast::Sender<ManagerEvent>,
@@ -270,8 +269,8 @@ impl PeerManager {
     }
 
     fn on_peer_removed(&mut self, peer_id: PeerId) {
+        let info = self.peers.get(&peer_id).unwrap().info();
         if self.peers.remove(&peer_id).is_some() {
-            let info = self.peers.get(&peer_id).unwrap().info();
             let _ = self.event_tx.send(ManagerEvent::PeerDisconnected(info));
         }
     }
@@ -355,5 +354,15 @@ impl PeerManager {
                 Err(last_err)
             }
         }
+    }
+
+    // new function
+    pub async fn peer_info(&self, peer_id: PeerId) -> Result<&Peer, anyhow::Error> {
+        let result = self
+            .peers
+            .get(&peer_id)
+            .ok_or_else(|| AppError::Network(format!("peer {peer_id} not found")))?;
+
+        Ok(result)
     }
 }
