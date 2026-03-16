@@ -1,6 +1,6 @@
 # V3 Node
 
-**V3 Node** is a lightweight Rust-based node that connects directly to **EVM peer-to-peer networks** to monitor and track **Uniswap V3–style decentralised exchange pools**. It discovers pool contracts via RPC polling, performs historical synchronization from the contract creation block, and maintains an up-to-date local state database using event logs.
+**V3 Node** is a lightweight Rust-based node that connects directly to **EVM peer-to-peer networks** to monitor and track **Uniswap V3–style decentralised exchange pools**. It performs historical synchronisation from the contract creation block, and maintains an up-to-date local state database using event logs.
 
 The node continuously listens for new state updates and relays them as they occur, making it suitable for analytics pipelines, trading infrastructure, and on-chain monitoring systems.
 
