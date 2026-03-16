@@ -32,6 +32,7 @@ The node continuously listens for new state updates and relays them as they occu
 ---
 
 ## Architecture
+
         +----------------------+
         |      Config File     |
         |  (DEX Pool Metadata) |
@@ -61,6 +62,50 @@ The node continuously listens for new state updates and relays them as they occu
         |  New State Updates   |
         +----------------------+
 
+---
+
+---
+
+## File Structure
+
+```
+v3-node/
+├── Cargo.toml
+├── README.MD
+├── .gitignore
+│
+└── src/
+    ├── lib.rs                  # Public library root — re-exports the public API
+    ├── main.rs                 # Binary entry point — thin, just wires config + calls lib
+    │
+    ├── config/
+    │   ├── mod.rs
+    │   └── types.rs            # Config structs (PoolConfig, NodeConfig, etc.)
+    │
+    ├── network/
+    │   ├── mod.rs
+    │   ├── peer.rs             # P2P peer discovery & connection logic
+    │   └── rpc.rs              # EVM RPC transport (eth_getLogs, eth_blockNumber, etc.)
+    │
+    ├── sync/
+    │   ├── mod.rs
+    │   ├── historical.rs       # Block-range event receipt scanning
+    │   └── live.rs             # New-block subscription & real-time relay
+    │
+    ├── pool/
+    │   ├── mod.rs
+    │   ├── events.rs           # Swap / Mint / Burn / Initialize event decoding
+    │   ├── state.rs            # Derived pool state (price, liquidity, tick, etc.)
+    │   └── math.rs             # V3 tick/price/liquidity math (sqrt price, etc.)
+    │
+    ├── db/
+    │   ├── mod.rs
+    │   ├── schema.rs           # SQLite table definitions / migrations
+    │   ├── queries.rs          # Read/write query helpers
+    │   └── models.rs           # Rust structs that map to DB rows
+    │
+    └── error.rs                # Unified error type (thiserror)
+```
 
 ---
 
@@ -94,3 +139,4 @@ The node continuously listens for new state updates and relays them as they occu
 git clone https://github.com/alex-hunter3/v3-node.git
 cd v3-node
 cargo build --release
+```
