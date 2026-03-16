@@ -23,8 +23,8 @@ The node continuously listens for new state updates and relays them as they occu
 - **Real-time updates**  
   After synchronisation, the node listens for and relays new pool state updates as they occur.
 
-- **Mempool access**
-  When listening to a pool, receive updates about swaps that are to take place in the future on the watched pools.
+- **Mempool access**  
+  When listening to a pool, receive updates about swaps that are to take place in the future on the watched pools.   
 
 - **Rust performance and safety**  
   Built with Rust for high performance, memory safety, and reliability.

@@ -4304,7 +4304,9 @@ source = "git+https://github.com/paradigmxyz/reth?tag=v1.11.3#d6324d63e27ef6b7c4
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
+ "bytes",
  "reth-primitives-traits",
+ "serde",
 ]
 
 [[package]]
@@ -4848,6 +4850,7 @@ dependencies = [
  "reth-storage-errors",
  "reth-trie-common",
  "revm-database",
+ "serde_json",
 ]
 
 [[package]]
@@ -6334,8 +6337,10 @@ dependencies = [
  "reth-discv4",
  "reth-eth-wire",
  "reth-network",
+ "reth-network-p2p",
  "reth-network-peers",
  "reth-primitives",
+ "reth-storage-api",
  "secp256k1 0.31.1",
  "serde",
  "serde_json",

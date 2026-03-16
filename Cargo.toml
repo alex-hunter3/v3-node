@@ -33,6 +33,8 @@ reth-eth-wire = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
 reth-chainspec = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
 reth-network = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
 reth-primitives = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
+reth-network-p2p = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
+reth-storage-api = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
 
 # Alloy
 alloy = "1.7.3"
