@@ -1,24 +1,25 @@
 use clap::Parser;
-use std::path::PathBuf;
-
 use v3_node::config::load_pools;
+use std::path::PathBuf;
 
 #[derive(Parser)]
 #[command(
     name = "v3-node",
-    about = "Listens to EVM P2P networks for Uniswap V3 pool state changes"
+    about = "Listens to EVM P2P networks for Uniswap V3 style pool state changes"
 )]
 struct Cli {
-    /// Path to the JSON file containing pool configurations
     #[arg(long)]
     pools: PathBuf,
 }
 
-fn main() {
+#[tokio::main]
+async fn main() -> anyhow::Result<()> {
+    tracing_subscriber::fmt().with_env_filter("info").init();
+
     let cli = Cli::parse();
 
-    let pools = load_pools(&cli.pools).expect("Failed to load pools config");
+    let pools = load_pools(&cli.pools).unwrap();
     println!("Loaded {} pool(s)", pools.len());
 
-    // v3_node::run(pools) -- will wire up once core logic exists
+    Ok(())
 }

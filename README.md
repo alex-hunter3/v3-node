@@ -85,7 +85,7 @@ v3-node/
     ├── network/
     │   ├── mod.rs
     │   ├── peer.rs             # P2P peer discovery & connection logic
-    │   └── rpc.rs              # EVM RPC transport (eth_getLogs, eth_blockNumber, etc.)
+    │   └── manager.rs          # manages all peer events after connection 
     │
     ├── sync/
     │   ├── mod.rs
@@ -111,8 +111,8 @@ v3-node/
 
 ## How It Works
 
-1. **Load configuration**  
-   The node reads a configuration file describing Uniswap V3–style pools or factories along with their contract creation block.
+1. **Load pools**  
+   The node reads a file containing all the Uniswap V3–style pools to be monitored along with their contract creation block.
 
 2. **Historical sync**  
    Event receipts are fetched from the creation block up to the latest block.
@@ -131,7 +131,6 @@ v3-node/
 
 - Rust (latest stable)
 - Cargo
-- Access to a public EVM RPC endpoint
 
 ### Build
 
