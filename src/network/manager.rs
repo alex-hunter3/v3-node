@@ -130,10 +130,10 @@ impl PeerManagerHandle {
             .map_err(|_| AppError::Network("peer list reply channel dropped".into()))
     }
 
-    // / Number of currently connected peers.
-    // pub async fn peer_count(&self) -> Result<usize, AppError> {
-    //     Ok(self.connected_peers().await?.len())
-    // }
+    /// Number of currently connected peers.
+    pub async fn peer_count(&self) -> Result<usize, AppError> {
+        Ok(self.connected_peers().await?.len())
+    }
 }
 
 // ─── PeerManager (actor) ─────────────────────────────────────────────────────
@@ -253,16 +253,6 @@ impl PeerManager {
         let peer = Peer::from_session(info, sender);
         let peer_info = peer.info();
         let peer_id = peer.id();
-
-        // info!(
-        //     target: "network::manager",
-        //     %peer_id,
-        //     addr    = %peer_info.remote_addr,
-        //     eth_ver = ?peer_info.eth_version,
-        //     client  = %peer_info.client_version,
-        //     total   = self.peers.len() + 1,
-        //     "peer handshake created",
-        // );
 
         self.peers.insert(peer_id, peer);
         let _ = self.event_tx.send(ManagerEvent::PeerConnected(peer_info));

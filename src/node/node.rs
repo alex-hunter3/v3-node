@@ -31,9 +31,13 @@ impl Node {
         loop {
             match evts.recv().await {
                 Ok(ManagerEvent::PeerConnected(info)) => {
+                    let num_peers = self.mgr_handler.connected_peers().await.unwrap_or_default();
                     println!(
-                        "✓ peer connected | addr={} eth={:?} client={:?}",
-                        info.remote_addr, info.eth_version, info.client_version
+                        "✓ peer connected | addr={} eth={:?} client={:?} connected_peers={}",
+                        info.remote_addr,
+                        info.eth_version,
+                        info.client_version,
+                        num_peers.len()
                     );
 
                     // Kick off historical sync
@@ -41,11 +45,13 @@ impl Node {
                 }
 
                 Ok(ManagerEvent::PeerDisconnected(info, reason)) => {
+                    let num_peers = self.mgr_handler.connected_peers().await.unwrap_or_default();
                     println!(
-                        "✗ peer disconnected | addr={} eth={:?} client={:?}reason={}",
+                        "✗ peer disconnected | addr={} eth={:?} client={:?} connected_peers={} reason={}",
                         info.remote_addr,
                         info.eth_version,
                         info.client_version,
+                        num_peers.len(),
                         reason.unwrap_or_default()
                     );
                 }
