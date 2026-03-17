@@ -1,14 +1,18 @@
 use tokio::sync::broadcast;
 
-use crate::network::manager::{ManagerEvent, PeerManager, PeerManagerHandle};
+use crate::{
+    config::{PoolConfig, types::Database},
+    network::manager::{ManagerEvent, PeerManager, PeerManagerHandle},
+};
 
 #[derive(Debug)]
 pub struct Node {
     // evm: // coming for simulations
-    // pools // unimplemented
     manager: PeerManager,
     mgr_handler: PeerManagerHandle,
     peer_events: broadcast::Receiver<ManagerEvent>,
+    pool_config: Vec<PoolConfig>,
+    db: Database,
 }
 
 impl Node {
@@ -16,11 +20,15 @@ impl Node {
         manager: PeerManager,
         mgr_handler: PeerManagerHandle,
         peer_events: broadcast::Receiver<ManagerEvent>,
+        db: Database,
+        pool_config: Vec<PoolConfig>,
     ) -> Self {
         Self {
             manager,
             mgr_handler,
             peer_events,
+            pool_config,
+            db,
         }
     }
 

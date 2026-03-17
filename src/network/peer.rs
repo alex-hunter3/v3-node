@@ -7,17 +7,13 @@ use reth_eth_wire::{
     Capabilities, EthVersion, GetReceipts, GetReceipts70, Receipts, Receipts69, Receipts70,
 };
 use reth_network::{
-    EthNetworkPrimitives, NetworkConfig, NetworkHandle, NetworkManager, Peers,
-    config::rng_secret_key,
+    EthNetworkPrimitives, NetworkHandle, Peers,
     events::{PeerRequest, PeerRequestSender, SessionInfo},
 };
 use reth_network_p2p::error::RequestError;
-use reth_network_peers::{NodeRecord, PeerId, mainnet_nodes};
+use reth_network_peers::{NodeRecord, PeerId};
 use reth_primitives::Receipt;
-use reth_storage_api::noop::NoopProvider;
 use tokio::sync::oneshot;
-
-use crate::error::AppError;
 
 // ─── Error type ─────────────────────────────────────────────────────────────
 
@@ -179,27 +175,6 @@ impl Peer {
             }
         }
     }
-}
-
-// ─── Network bootstrap ──────────────────────────────────────────────────────
-
-/// Spin up a [`NetworkManager`] connected to mainnet and return a
-/// [`NetworkHandle`].
-pub async fn start_network() -> Result<NetworkHandle, AppError> {
-    let secret_key = rng_secret_key();
-
-    let config = NetworkConfig::<_, EthNetworkPrimitives>::builder(secret_key)
-        .boot_nodes(mainnet_nodes())
-        .build(NoopProvider::default());
-
-    let manager = NetworkManager::new(config)
-        .await
-        .map_err(|e| AppError::Network(e.to_string()))?;
-
-    let handle = manager.handle().clone();
-    tokio::spawn(manager);
-
-    Ok(handle)
 }
 
 // ─── Peer management helpers ─────────────────────────────────────────────────
