@@ -45,3 +45,6 @@ secp256k1 = { version = "0.31.1", features = ["rand"] }
 
 # Futures
 futures = "0.3.32"
+
+# SQLite bindings
+rusqlite = { version = "0.39.0", features = ["bundled"] }

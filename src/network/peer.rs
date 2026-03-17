@@ -47,7 +47,7 @@ pub struct PeerInfo {
 // ─── Peer ───────────────────────────────────────────────────────────────────
 
 /// A live, authenticated P2P session with a remote Ethereum peer.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Peer {
     info: PeerInfo,
     /// `ActivePeerSession.messages` is `PeerRequestSender<PeerRequest<N>>` —

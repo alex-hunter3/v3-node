@@ -30,7 +30,7 @@ use std::collections::HashMap;
 use alloy::primitives::B256;
 use futures::StreamExt;
 use reth_network::{
-    EthNetworkPrimitives, NetworkEventListenerProvider, NetworkHandle,
+    DisconnectReason, EthNetworkPrimitives, NetworkEventListenerProvider, NetworkHandle,
     events::{NetworkEvent, PeerEvent, PeerRequest, PeerRequestSender, SessionInfo},
 };
 // use reth_network_peers::AnyNode::PeerId;
@@ -53,7 +53,7 @@ pub enum ManagerEvent {
     /// A new peer session has been established and registered.
     PeerConnected(PeerInfo),
     /// A peer has been removed (session closed or connection dropped).
-    PeerDisconnected(PeerInfo),
+    PeerDisconnected(PeerInfo, Option<DisconnectReason>),
 }
 
 // ─── Internal command type ───────────────────────────────────────────────────
@@ -73,7 +73,7 @@ enum Command {
 // ─── PeerManagerHandle ───────────────────────────────────────────────────────
 
 /// Handle to the background [`PeerManager`] task. Cheap to clone.
-#[derive(Clone)]
+#[derive(Debug, Clone)]
 pub struct PeerManagerHandle {
     cmd_tx: mpsc::Sender<Command>,
 }
@@ -137,7 +137,7 @@ impl PeerManagerHandle {
 }
 
 // ─── PeerManager (actor) ─────────────────────────────────────────────────────
-
+#[derive(Debug)]
 pub struct PeerManager {
     peers: HashMap<PeerId, Peer>,
     rr_index: usize,
@@ -216,25 +216,25 @@ impl PeerManager {
             NetworkEvent::Peer(evt) => match evt {
                 PeerEvent::SessionClosed { peer_id, reason } => {
                     if self.peers.contains_key(&peer_id) {
-                        let info = self.peers.get(&peer_id).unwrap().info();
-                        println!(
-                            "✗ peer disconnected | id={} addr={} eth={:?} reason={}",
-                            info.id,
-                            info.remote_addr,
-                            info.eth_version,
-                            reason.unwrap_or_default()
-                        );
-                        self.on_peer_removed(peer_id);
+                        // let info = self.peers.get(&peer_id).unwrap().info();
+                        // println!(
+                        //     "✗ peer disconnected | id={} addr={} eth={:?} reason={}",
+                        //     info.id,
+                        //     info.remote_addr,
+                        //     info.eth_version,
+                        //     reason.unwrap_or_default()
+                        // );
+                        self.on_peer_removed(peer_id, reason);
                     }
                 }
                 PeerEvent::PeerRemoved(peer_id) => {
                     if self.peers.contains_key(&peer_id) {
-                        let info = self.peers.get(&peer_id).unwrap().info();
-                        println!(
-                            "✗ peer removed | id={} addr={} eth={:?}",
-                            info.id, info.remote_addr, info.eth_version
-                        );
-                        self.on_peer_removed(peer_id);
+                        // let info = self.peers.get(&peer_id).unwrap().info();
+                        // println!(
+                        //     "✗ peer removed | id={} addr={} eth={:?}",
+                        //     info.id, info.remote_addr, info.eth_version
+                        // );
+                        self.on_peer_removed(peer_id, None);
                     }
                 }
                 PeerEvent::PeerAdded(_peer_id) => {
@@ -268,10 +268,10 @@ impl PeerManager {
         let _ = self.event_tx.send(ManagerEvent::PeerConnected(peer_info));
     }
 
-    fn on_peer_removed(&mut self, peer_id: PeerId) {
+    fn on_peer_removed(&mut self, peer_id: PeerId, reason: Option<DisconnectReason>) {
         let info = self.peers.get(&peer_id).unwrap().info();
         if self.peers.remove(&peer_id).is_some() {
-            let _ = self.event_tx.send(ManagerEvent::PeerDisconnected(info));
+            let _ = self.event_tx.send(ManagerEvent::PeerDisconnected(info, reason));
         }
     }
 
@@ -327,7 +327,7 @@ impl PeerManager {
                             Ok(receipts) => {
                                 self.rr_index = (idx + 1) % total;
                                 for id in to_evict {
-                                    self.on_peer_removed(id);
+                                    self.on_peer_removed(id, None);
                                 }
                                 return Ok(receipts);
                             }
@@ -348,7 +348,7 @@ impl PeerManager {
                 }
 
                 for id in to_evict {
-                    self.on_peer_removed(id);
+                    self.on_peer_removed(id, None);
                 }
 
                 Err(last_err)
