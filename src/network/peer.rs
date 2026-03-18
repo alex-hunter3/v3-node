@@ -7,11 +7,11 @@ use reth_eth_wire::{
     Capabilities, EthVersion, GetReceipts, GetReceipts70, Receipts, Receipts69, Receipts70,
 };
 use reth_network::{
-    EthNetworkPrimitives, NetworkHandle, Peers,
+    EthNetworkPrimitives,
     events::{PeerRequest, PeerRequestSender, SessionInfo},
 };
 use reth_network_p2p::error::RequestError;
-use reth_network_peers::{NodeRecord, PeerId};
+use reth_network_peers::PeerId;
 use reth_primitives::Receipt;
 use tokio::sync::oneshot;
 
@@ -99,7 +99,7 @@ impl Peer {
     /// ────────────────────────────────────────────────────────────────────
     ///  eth/66-68   Receipts<T>   = Vec<Vec<ReceiptWithBloom<T>>>   yes
     ///  eth/69      Receipts69<T> = Vec<Vec<T>>                      no
-    ///  eth/70      Receipts70<T> → Into<Receipts<T>>                yes
+    ///  eth/70      Receipts70<T> → Into<Receipts<T>>               yes
     pub async fn fetch_receipts(
         &self,
         block_hashes: Vec<B256>,
@@ -175,11 +175,4 @@ impl Peer {
             }
         }
     }
-}
-
-// ─── Peer management helpers ─────────────────────────────────────────────────
-
-/// Dial a specific peer by [`NodeRecord`].
-pub fn add_peer(handle: &NetworkHandle, node: NodeRecord) {
-    handle.add_peer(node.id, node.tcp_addr());
 }

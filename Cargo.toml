@@ -25,6 +25,7 @@ anyhow = "1"
 
 # Async runtime
 tokio = { version = "1.49", features = ["full"] }
+tokio-stream = "0.1.18"
 
 # Reth — P2P networking stack
 reth-network-peers = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
@@ -38,7 +39,8 @@ reth-storage-api = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3
 reth-tokio-util = { git = "https://github.com/paradigmxyz/reth", tag = "v1.11.3" }
 
 # Alloy
-alloy = "1.7.3"
+alloy = { version = "1.7.3", features = ["full", "rlp"]}
+alloy-rlp = { version = "0.3", features = ["derive"] }
 
 # Crypto (for generating node identity)
 secp256k1 = { version = "0.31.1", features = ["rand"] }
@@ -48,3 +50,26 @@ futures = "0.3.32"
 
 # SQLite bindings
 rusqlite = { version = "0.39.0", features = ["bundled"] }
+
+# Consensus layer P2P
+libp2p = { version = "0.56.0", features = [
+    "tokio",
+    "tcp",
+    "noise",
+    "yamux",
+    "gossipsub",
+    "identify",
+    "macros",
+] }
+
+# CL peer discovery (discv5, separate from EL's discv4)
+discv5 = { version = "0.10.2", features = ["libp2p"] }
+
+# Snappy decompression (CL gossip encoding)
+snap = "1"
+
+# Fork digest computation
+sha2 = "0.10"
+
+[features]
+serde = []

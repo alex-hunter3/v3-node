@@ -37,11 +37,15 @@ async fn main() -> anyhow::Result<()> {
 
     let db: Database = Arc::new(Mutex::new(conn));
 
-    let network_handle = start_network().await?;
-    let (manager, mgr_handle, events) = PeerManager::new(network_handle);
-    let node = Node::new(manager, mgr_handle, events, db, pools);
+    let (network_handle, tx_events) = start_network().await?;
+    let (peer_manager, mgr_handle, peer_events) = PeerManager::new(network_handle);
 
-    node.start().await;
+    tokio::spawn(async move {
+        peer_manager.run().await;
+    });
+
+    let node = Node::new(mgr_handle, peer_events, db, pools);
+    node.start(tx_events).await;
 
     Ok(())
 }

@@ -75,36 +75,40 @@ v3-node/
 ├── .gitignore
 │
 └── src/
-    ├── lib.rs                  # Public library root — re-exports the public API
-    ├── main.rs                 # Binary entry point — thin, just wires config + calls lib
-    │
-    ├── config/
-    │   ├── mod.rs
-    │   └── types.rs            # Config structs (PoolConfig, NodeConfig, etc.)
-    │
-    ├── network/
-    │   ├── mod.rs
-    │   ├── peer.rs             # P2P peer discovery & connection logic
-    │   └── manager.rs          # manages all peer events after connection 
-    │
-    ├── sync/
-    │   ├── mod.rs
-    │   ├── historical.rs       # Block-range event receipt scanning
-    │   └── live.rs             # New-block subscription & real-time relay
-    │
-    ├── pool/
-    │   ├── mod.rs
-    │   ├── events.rs           # Swap / Mint / Burn / Initialize event decoding
-    │   ├── state.rs            # Derived pool state (price, liquidity, tick, etc.)
-    │   └── math.rs             # V3 tick/price/liquidity math (sqrt price, etc.)
-    │
-    ├── db/
-    │   ├── mod.rs
-    │   ├── schema.rs           # SQLite table definitions / migrations
-    │   ├── queries.rs          # Read/write query helpers
-    │   └── models.rs           # Rust structs that map to DB rows
-    │
-    └── error.rs                # Unified error type (thiserror)
+├── lib.rs # Public library root — re-exports the public API
+├── main.rs # Binary entry point — thin, just wires config + calls lib
+│
+├── config/
+│ ├── mod.rs
+│ └── types.rs # Config structs (PoolConfig, NodeConfig, etc.)
+│
+├── network/
+│ ├── mod.rs
+│ ├── peer.rs # P2P peer discovery & connection logic
+│ └── manager.rs # Manages all peer events after connection
+│
+├── node/
+│ ├── mod.rs
+│ └── node.rs # High-level orchestrator — coordinates network, sync, pools, and DB
+│
+├── sync/
+│ ├── mod.rs
+│ ├── historical.rs # Block-range event receipt scanning
+│ └── live.rs # New-block subscription & real-time relay
+│
+├── pool/
+│ ├── mod.rs
+│ ├── events.rs # Swap / Mint / Burn / Initialise event decoding
+│ ├── state.rs # Derived pool state (price, liquidity, tick, etc.)
+│ └── math.rs # V3 tick/price/liquidity math (sqrt price, etc.)
+│
+├── db/
+│ ├── mod.rs
+│ ├── schema.rs # SQLite table definitions / migrations
+│ ├── queries.rs # Read/write query helpers
+│ └── models.rs # Rust structs that map to DB rows
+│
+└── error.rs # Unified error type (thiserror)
 ```
 
 ---

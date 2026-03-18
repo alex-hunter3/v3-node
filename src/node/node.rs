@@ -1,79 +1,191 @@
-use tokio::sync::broadcast;
+use std::sync::Arc;
+
+use alloy::consensus::{Transaction, transaction::SignerRecoverable};
+use reth_eth_wire::PooledTransactions;
+use reth_network::{EthNetworkPrimitives, transactions::NetworkTransactionEvent};
+use tokio::{
+    sync::{
+        broadcast::{self, error::RecvError},
+        mpsc::UnboundedReceiver,
+    },
+    task,
+};
 
 use crate::{
     config::{PoolConfig, types::Database},
-    network::manager::{ManagerEvent, PeerManager, PeerManagerHandle},
+    error::AppError,
+    network::{
+        manager::{ManagerEvent, PeerManagerHandle},
+        peer::PeerInfo,
+    },
+    pool::decoder::decode_pool_calldata,
 };
 
 #[derive(Debug)]
 pub struct Node {
     // evm: // coming for simulations
-    manager: PeerManager,
     mgr_handler: PeerManagerHandle,
     peer_events: broadcast::Receiver<ManagerEvent>,
     pool_config: Vec<PoolConfig>,
-    db: Database,
+    _db: Database,
 }
 
 impl Node {
     pub fn new(
-        manager: PeerManager,
         mgr_handler: PeerManagerHandle,
         peer_events: broadcast::Receiver<ManagerEvent>,
         db: Database,
         pool_config: Vec<PoolConfig>,
-    ) -> Self {
-        Self {
-            manager,
+    ) -> Arc<Self> {
+        Arc::new(Self {
             mgr_handler,
             peer_events,
             pool_config,
-            db,
+            _db: db,
+        })
+    }
+
+    async fn handle_pool_sync(&self) {}
+
+    async fn connected_peers(&self) -> Result<Vec<PeerInfo>, AppError> {
+        self.mgr_handler.connected_peers().await
+    }
+
+    async fn handle_tx_event(&self, event: NetworkTransactionEvent<EthNetworkPrimitives>) {
+        match event {
+            NetworkTransactionEvent::IncomingTransactions { peer_id: _, msg } => {
+                // Full transactions gossiped directly — scan for pool interactions
+                for mut tx in msg.0 {
+                    // Check if this tx is directed at a watched pool
+                    let Some(to) = tx.to() else { continue };
+
+                    if let Some(pool) = self
+                        .pool_config
+                        .iter()
+                        .find(|p| p.address == to.to_string())
+                    {
+                        println!(
+                            "🎯 pool interaction | pool={} hash={} from={:?}",
+                            pool.address,
+                            tx.hash(),
+                            tx.recover_signer(),
+                        );
+
+                        if let Some(decoded) = decode_pool_calldata(tx.input_mut()) {
+                            println!("   └─ {:?}", decoded);
+                        }
+                    }
+                }
+            }
+
+            NetworkTransactionEvent::IncomingPooledTransactionHashes { peer_id, msg } => {
+                // Peer announced tx hashes — you can request full txs if interested
+                println!("📋 {} pooled tx hashes from {}", msg.len(), peer_id);
+                // TODO: filter for txs to watched pools, request full txs
+            }
+
+            NetworkTransactionEvent::GetPooledTransactions {
+                peer_id: _,
+                request: _,
+                response,
+            } => {
+                // Peer is asking us for txs — you don't have a pool so just drop
+                let _ = response.send(Ok(PooledTransactions(vec![])));
+            }
+
+            NetworkTransactionEvent::GetTransactionsHandle(_) => {}
         }
     }
 
-    pub async fn start(self) {
-        tokio::spawn(self.manager.run());
+    async fn handle_peer_event(
+        &self,
+        evt: Result<ManagerEvent, tokio::sync::broadcast::error::RecvError>,
+    ) {
+        match evt {
+            Ok(ManagerEvent::PeerConnected(peer)) => {
+                let num_peers = match self.connected_peers().await {
+                    Ok(peers) => peers.len(),
+                    Err(_) => return,
+                };
+                println!(
+                    "✓ peer connected | id={} eth={:?} client={:?} connected_peers={}",
+                    peer.id, peer.eth_version, peer.client_version, num_peers
+                );
 
-        let mut evts = self.peer_events;
+                self.handle_pool_sync().await;
+            }
+
+            Ok(ManagerEvent::PeerDisconnected(peer, reason)) => {
+                let num_peers = match self.connected_peers().await {
+                    Ok(peers) => peers.len(),
+                    Err(_) => return,
+                };
+                println!(
+                    "✗ peer disconnected | id={} eth={:?} client={:?} connected_peers={} reason={}",
+                    peer.id,
+                    peer.eth_version,
+                    peer.client_version,
+                    num_peers,
+                    reason.unwrap_or_default()
+                );
+            }
+
+            // Ok(ManagerEvent::NewBlock(block_event)) => {
+            //     // If NewBlock expects a different processing path, handle it.
+            //     let evt = block_event.as_ref();
+            //     match evt {
+            //         NewBlockEvent::Block(message) => {
+            //             println!(
+            //                 "⛏ new block (from peer) | number={} hash={}",
+            //                 message.number(), message.hash
+            //             );
+
+            //             let this = Arc::clone(&self);
+            //             // clone block_event or otherwise move it appropriately
+            //             let block_evt = block_event.clone();
+            //             task::spawn(async move {
+            //                 this.handle_new_block(*block_evt).await;
+            //             });
+            //         }
+            //         _ => {
+            //         }
+            //     }
+            // }
+            Err(RecvError::Lagged(n)) => {
+                eprintln!("warn: peer events receiver lagged, skipped {n} events");
+            }
+
+            Err(RecvError::Closed) => {
+                eprintln!("error: peer manager stopped unexpectedly");
+                // break;
+            }
+
+            _ => {}
+        }
+    }
+
+    pub async fn start(
+        self: Arc<Self>,
+        mut tx_events: UnboundedReceiver<NetworkTransactionEvent<EthNetworkPrimitives>>,
+    ) {
+        let mut peer_evts = self.peer_events.resubscribe();
+
         loop {
-            match evts.recv().await {
-                Ok(ManagerEvent::PeerConnected(info)) => {
-                    let num_peers = self.mgr_handler.connected_peers().await.unwrap_or_default();
-                    println!(
-                        "✓ peer connected | addr={} eth={:?} client={:?} connected_peers={}",
-                        info.remote_addr,
-                        info.eth_version,
-                        info.client_version,
-                        num_peers.len()
-                    );
-
-                    // Kick off historical sync
-                    // tokio::spawn(historical_sync(mgr_handle.clone(), pools.clone()));
+            tokio::select! {
+                peer_evt = peer_evts.recv() => {
+                    let this = Arc::clone(&self);
+                    task::spawn(async move {
+                        this.handle_peer_event(peer_evt).await;
+                    });
                 }
 
-                Ok(ManagerEvent::PeerDisconnected(info, reason)) => {
-                    let num_peers = self.mgr_handler.connected_peers().await.unwrap_or_default();
-                    println!(
-                        "✗ peer disconnected | addr={} eth={:?} client={:?} connected_peers={} reason={}",
-                        info.remote_addr,
-                        info.eth_version,
-                        info.client_version,
-                        num_peers.len(),
-                        reason.unwrap_or_default()
-                    );
-                }
-
-                // The broadcast channel will return Lagged if this consumer
-                // falls behind — just log and continue rather than crashing.
-                Err(tokio::sync::broadcast::error::RecvError::Lagged(n)) => {
-                    eprintln!("warn: event receiver lagged, skipped {n} events");
-                }
-
-                // Sender dropped — manager task exited, nothing left to do.
-                Err(tokio::sync::broadcast::error::RecvError::Closed) => {
-                    eprintln!("error: peer manager stopped unexpectedly");
-                    break;
+                tx_evt = tx_events.recv() => {
+                    if let Some(tx_evt) = tx_evt {
+                        let this = Arc::clone(&self);
+                        task::spawn(async move {
+                            this.handle_tx_event(tx_evt).await;
+                        });
+                    }
                 }
             }
         }

@@ -29,22 +29,32 @@ use std::collections::HashMap;
 
 use alloy::primitives::B256;
 use futures::StreamExt;
+
 use reth_network::{
     DisconnectReason, EthNetworkPrimitives, NetworkConfig, NetworkEventListenerProvider,
     NetworkHandle, NetworkManager,
     config::rng_secret_key,
     events::{NetworkEvent, PeerEvent, PeerRequest, PeerRequestSender, SessionInfo},
+    import::NewBlockEvent,
+    transactions::NetworkTransactionEvent,
 };
-// use reth_network_peers::AnyNode::PeerId;
-use reth_network_peers::{PeerId, parse_nodes};
+use reth_network_peers::PeerId;
 use reth_primitives::Receipt;
 use reth_storage_api::noop::NoopProvider;
 use reth_tokio_util::EventStream;
-use tokio::sync::{broadcast, mpsc, oneshot};
+
+use tokio::sync::{
+    broadcast,
+    mpsc::{self, UnboundedReceiver},
+    oneshot,
+};
 
 use crate::{
     error::AppError,
-    network::peer::{Peer, PeerError, PeerInfo},
+    network::{
+        chainspec::{bootnodes, bsc_chain_spec, head},
+        peer::{Peer, PeerError, PeerInfo},
+    },
 };
 
 // ─── Public event type ───────────────────────────────────────────────────────
@@ -57,6 +67,8 @@ pub enum ManagerEvent {
     PeerConnected(PeerInfo),
     /// A peer has been removed (session closed or connection dropped).
     PeerDisconnected(PeerInfo, Option<DisconnectReason>),
+    /// A new block has been announced by a peer
+    NewBlock(Box<NewBlockEvent>),
 }
 
 // ─── Internal command type ───────────────────────────────────────────────────
@@ -160,9 +172,8 @@ impl PeerManager {
         let (cmd_tx, cmd_rx) = mpsc::channel(128);
         let (event_tx, event_rx) = broadcast::channel(256);
 
-        // Subscribe before the first poll — actual type is
-        // EventStream<NetworkEvent<PeerRequest<EthNetworkPrimitives>>>.
         let events = handle.event_listener();
+        // let peer_listener = handle.peer_events();
 
         let manager = Self {
             peers: HashMap::new(),
@@ -186,7 +197,6 @@ impl PeerManager {
         println!("Connecting to peers...");
         loop {
             tokio::select! {
-                // EventStream implements Stream — poll with StreamExt::next().
                 maybe_event = self.events.next() => {
                     match maybe_event {
                         Some(event) => self.handle_network_event(event),
@@ -219,29 +229,13 @@ impl PeerManager {
             NetworkEvent::Peer(evt) => match evt {
                 PeerEvent::SessionClosed { peer_id, reason } => {
                     if self.peers.contains_key(&peer_id) {
-                        // let info = self.peers.get(&peer_id).unwrap().info();
-                        // println!(
-                        //     "✗ peer disconnected | id={} addr={} eth={:?} reason={}",
-                        //     info.id,
-                        //     info.remote_addr,
-                        //     info.eth_version,
-                        //     reason.unwrap_or_default()
-                        // );
                         self.on_peer_removed(peer_id, reason);
                     }
                 }
                 PeerEvent::PeerRemoved(peer_id) => {
                     if self.peers.contains_key(&peer_id) {
-                        // let info = self.peers.get(&peer_id).unwrap().info();
-                        // println!(
-                        //     "✗ peer removed | id={} addr={} eth={:?}",
-                        //     info.id, info.remote_addr, info.eth_version
-                        // );
                         self.on_peer_removed(peer_id, None);
                     }
-                }
-                PeerEvent::PeerAdded(_peer_id) => {
-                    // println!("id: {} peer added (awaiting handshake)", peer_id);
                 }
                 _ => {}
             },
@@ -308,7 +302,7 @@ impl PeerManager {
             None => {
                 let peer_ids: Vec<PeerId> = self.peers.keys().copied().collect();
                 let total = peer_ids.len();
-                self.rr_index = self.rr_index % total;
+                self.rr_index %= total;
 
                 let mut last_err = PeerError::Disconnected(PeerId::default());
                 let mut to_evict: Vec<PeerId> = Vec::new();
@@ -366,27 +360,37 @@ impl PeerManager {
 
 /// Spin up a [`NetworkManager`] connected to mainnet and return a
 /// [`NetworkHandle`].
-pub async fn start_network() -> Result<NetworkHandle, AppError> {
-    let secret_key = rng_secret_key();
-    let bootnodes = [
-        "enode://433c8bfdf53a3e2268ccb1b829e47f629793291cbddf0c76ae626da802f90532251fc558e2e0d10d6725e759088439bf1cd4714716b03a259a35d4b2e4acfa7f@52.69.102.73:30311",
-        "enode://571bee8fb902a625942f10a770ccf727ae2ba1bab2a2b64e121594a99c9437317f6166a395670a00b7d93647eacafe598b6bbcef15b40b6d1a10243865a3e80f@35.73.84.120:30311",
-        "enode://fac42fb0ba082b7d1eebded216db42161163d42e4f52c9e47716946d64468a62da4ba0b1cac0df5e8bf1e5284861d757339751c33d51dfef318be5168803d0b5@18.203.152.54:30311",
-        "enode://3063d1c9e1b824cfbb7c7b6abafa34faec6bb4e7e06941d218d760acdd7963b274278c5c3e63914bd6d1b58504c59ec5522c56f883baceb8538674b92da48a96@34.250.32.100:30311",
-        "enode://ad78c64a4ade83692488aa42e4c94084516e555d3f340d9802c2bf106a3df8868bc46eae083d2de4018f40e8d9a9952c32a0943cd68855a9bc9fd07aac982a6d@34.204.214.24:30311",
-        "enode://5db798deb67df75d073f8e2953dad283148133acb520625ea804c9c4ad09a35f13592a762d8f89056248f3889f6dcc33490c145774ea4ff2966982294909b37a@107.20.191.97:30311",
-    ];
+pub async fn start_network() -> Result<
+    (
+        NetworkHandle,
+        UnboundedReceiver<NetworkTransactionEvent<EthNetworkPrimitives>>,
+    ),
+    AppError,
+> {
+    let config = NetworkConfig::<_, EthNetworkPrimitives>::builder(rng_secret_key())
+        .boot_nodes(bootnodes())
+        .set_head(head())
+        .build(NoopProvider::eth(bsc_chain_spec()));
 
-    let config = NetworkConfig::<_, EthNetworkPrimitives>::builder(secret_key)
-        .boot_nodes(parse_nodes(bootnodes))
-        .build(NoopProvider::default());
+    // from https://github.com/bnb-chain/reth/blob/main/examples/bsc-p2p/src/main.rs
+    // let secret_key = SecretKey::new(&mut secp256k1::rand::rng());
+    // let config = NetworkConfig::builder(secret_key)
+    //     .boot_nodes(bootnodes())
+    //     .set_head(head())
+    //     .with_pow()
+    //     .listener_addr(SocketAddr::new(Ipv4Addr::UNSPECIFIED.into(), 30303))
+    //     .eth_rlpx_handshake(Arc::new(BscHandshake::default()))
+    //     .build(NoopProvider::eth(bsc_chain_spec()));
 
     let manager = NetworkManager::new(config)
         .await
         .map_err(|e| AppError::Network(e.to_string()))?;
 
+    let (tx_events_tx, tx_events_rx) = mpsc::unbounded_channel();
+    let manager = manager.with_transactions(tx_events_tx);
+
     let handle = manager.handle().clone();
     tokio::spawn(manager);
 
-    Ok(handle)
+    Ok((handle, tx_events_rx))
 }
