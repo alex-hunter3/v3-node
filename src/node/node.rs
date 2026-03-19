@@ -173,6 +173,6 @@ impl Node {
 }
 
 fn short_id(id: &PeerId) -> String {
-    let s = format!("{id:x}"); // lowercase hex, no 0x prefix
+    let s = format!("{id:x}");
     format!("{}…{}", &s[..8], &s[s.len() - 8..])
 }

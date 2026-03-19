@@ -1,0 +1,2195 @@
+[
+  {
+    "feeTier": 500,
+    "address": "0x36696169c63e42cd08ce11f5deebbcebae652050",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26970848
+  },
+  {
+    "feeTier": 100,
+    "address": "0x4f3126d5de26413abdcf6948943fb9d0847d9818",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972234
+  },
+  {
+    "feeTier": 100,
+    "address": "0x172fcd41e0913e95784454622d1c3724f546f849",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27085961
+  },
+  {
+    "feeTier": 500,
+    "address": "0x85faac652b707fdf6907ef726751087f9e0b6687",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971618
+  },
+  {
+    "feeTier": 100,
+    "address": "0x92b7807bf19b7dddf89b706143896d05228f3121",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972126
+  },
+  {
+    "feeTier": 500,
+    "address": "0x369482c78bad380a036cab827fe677c1903d1523",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971715
+  },
+  {
+    "feeTier": 500,
+    "address": "0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971762
+  },
+  {
+    "feeTier": 500,
+    "address": "0x539e0ebfffd39e54a0f7e5f8fec40ade7933a664",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972080
+  },
+  {
+    "feeTier": 100,
+    "address": "0x22536030b9ce783b6ddfb9a39ac7f439f568e5e6",
+    "token0": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972156
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xfc75f4e78bf71ed5066db9ca771d4ccb7c1264e0",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971922
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x133b3d95bad5405d14d53473671200e9342896bf",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971063
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x7d05c84581f0c41ad80ddf677a510360bae09a5a",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971983
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x7f51c8aaa6b0599abd16674e2b17fec7a9f674a1",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971544
+  },
+  {
+    "feeTier": 100,
+    "address": "0xd881d9d0e0767719701305c614903f555d589586",
+    "token0": {
+      "decimals": 18,
+      "address": "0x40af3827f39d0eacbf4a168f8d4ee67c121d11c9",
+      "symbol": "TUSD"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29154083
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xd15b00e81f98a7db25f1dc1ba6e983a4316c4cac",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "symbol": "XRP"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972587
+  },
+  {
+    "feeTier": 500,
+    "address": "0xd0e226f674bbf064f54ab47f42473ff80db98cba",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27031066
+  },
+  {
+    "feeTier": 100,
+    "address": "0x803036ac78752ef599ec75c500ac8b0ac0be67df",
+    "token0": {
+      "decimals": 6,
+      "address": "0x4268b8f0b87b6eae5d897996e6b845ddbd99adf3",
+      "symbol": "axlUSDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29595593
+  },
+  {
+    "feeTier": 500,
+    "address": "0x4f31fa980a675570939b737ebdde0471a4be40eb",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27885316
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x6425bc30d0751af5181fc74a50e760b0e4a19811",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+      "symbol": "EDU"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27775666
+  },
+  {
+    "feeTier": 500,
+    "address": "0xafb2da14056725e3ba3a30dd846b6bbbd7886c56",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27028594
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x9f6eb6903c1277c8f02d71f8814dc9998199af1d",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26971483
+  },
+  {
+    "feeTier": 500,
+    "address": "0x6bbc40579ad1bbd243895ca0acb086bb6300d636",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27467113
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xfb5c2d2f2cf7741ba1a7be2ffabed248bd9b888e",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbdeae1ca48894a1759a8374d63925f21f2ee2639",
+      "symbol": "EDU"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27772844
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x673516e510d702ab5f2bbf0c6b545111a85f7ea7",
+    "token0": {
+      "decimals": 18,
+      "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "symbol": "ADA"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972731
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x4e1f9adf96dba6dc09c973228c286568f1315ea8",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2dff88a56767223a5529ea5960da7a3f5f766406",
+      "symbol": "ID"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27534589
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x505d091fd01b3d4340827a3737c950f030cdd9a7",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0d8ce2a99bb6e3b7db580ed848240e4a0f9ae153",
+      "symbol": "FIL"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27033038
+  },
+  {
+    "feeTier": 500,
+    "address": "0x7b1db35fbd95548777b9079527e8fa2a70fb2ce0",
+    "token0": {
+      "decimals": 18,
+      "address": "0x12f31b73d812c6bb0d735a218c086d44d5fe5f89",
+      "symbol": "agEUR"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28054759
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x0e1893beeb4d0913d26b9614b18aea29c56d94b9",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "symbol": "LINK"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972490
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x9c56d383159ec6ddc59ffa4d1ac56aed05a01de2",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xcc42724c6683b7e57334c4e856f4c9965ed682bd",
+      "symbol": "MATIC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27027669
+  },
+  {
+    "feeTier": 500,
+    "address": "0x5bcb1a10d281f0ff55dfb457c47921cb12ca63b8",
+    "token0": {
+      "decimals": 18,
+      "address": "0x4b0f1812e5df2a09796481ff14017e6005508003",
+      "symbol": "TWT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27039423
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x62f0546cbcd684f7c394d8549119e072527c41bc",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402",
+      "symbol": "DOT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 26972776
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xce6160bb594fc055c943f59de92cee30b8c6b32c",
+    "token0": {
+      "decimals": 8,
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+      "symbol": "DOGE"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27034984
+  },
+  {
+    "feeTier": 500,
+    "address": "0x379044e32f5a162233e82de19da852255d0951b8",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xa2e3356610840701bdf5611a53974510ae27e2e1",
+      "symbol": "wBETH"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27716348
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x89cc4347eac9bdf71f9d783c7a25729e5c579108",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0ae38f7e10a43b5b2fb064b42a2f4514cba909ef",
+      "symbol": "unshETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27656544
+  },
+  {
+    "feeTier": 10000,
+    "address": "0xf05bcb4e3f6a015c4d961c413f7b72efdbb31eab",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xfe8bf5b8f5e4eb5f9bc2be16303f7dab8cf56aa8",
+      "symbol": "BIBI"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28010051
+  },
+  {
+    "feeTier": 500,
+    "address": "0x298accd14a6c4e004feeb2163680490bf1121a24",
+    "token0": {
+      "decimals": 9,
+      "address": "0x75ca521892de7f2ecfb070cab545c250d0ceb7e3",
+      "symbol": "PVC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27668094
+  },
+  {
+    "feeTier": 100,
+    "address": "0xcaffe485372708d8359f77b86e01bc4cb6b31858",
+    "token0": {
+      "decimals": 18,
+      "address": "0x3862b022f0db84c11aa2c0df9f587f2ceb8dfc2e",
+      "symbol": "TRANS"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28893542
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x846bd025527c8427809e11d0b0a9ce50f149d5d5",
+    "token0": {
+      "decimals": 18,
+      "address": "0x14778860e937f509e651192a90589de711fb88a9",
+      "symbol": "CYBER"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30837038
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x1401ff943d08a7e098328c1d3a9d388923b115d2",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27051574
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xbba8f85c3ceddf73db4de17d31608d640eaea416",
+    "token0": {
+      "decimals": 18,
+      "address": "0x25d887ce7a35172c62febfd67a1856f20faebb00",
+      "symbol": "PEPE"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28346852
+  },
+  {
+    "feeTier": 10000,
+    "address": "0xa51da87491f9bcd649ef8f89d07e07526a659509",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x7f9ad7a5854658d984924e868187b2135514fb88",
+      "symbol": "BVSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27099119
+  },
+  {
+    "feeTier": 500,
+    "address": "0xae7a3d9bed2ba4ef9c134ff4baee33655ae5de6f",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xc2e9d07f66a89c44062459a47a0d2dc038e4fb16",
+      "symbol": "stkBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27046647
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xe8df1539b380274f1f8205a8f45a7cc266793518",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2859e4544c4bb03966803b044a93563bd2d0dd4d",
+      "symbol": "SHIB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27282250
+  },
+  {
+    "feeTier": 500,
+    "address": "0xcf57daadfbe05a04440c502967ce5209f64747eb",
+    "token0": {
+      "decimals": 18,
+      "address": "0x52f24a5e03aee338da5fd9df68d2b6fae1178827",
+      "symbol": "ankrBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27258109
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xc2b3dbbf26d43617036b0eba53ad2dbd945adebf",
+    "token0": {
+      "decimals": 18,
+      "address": "0xaec945e04baf28b135fa7c640f624f8d90f1c3a6",
+      "symbol": "C98"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28283964
+  },
+  {
+    "feeTier": 500,
+    "address": "0x1625f94b9185c028733e3eb41c8203b6b8a11729",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27033301
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x64ebb904e169cb94e9788fcb68283b4c894ed881",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xd41fdb03ba84762dd66a0af1a6c8540ff1ba5dfb",
+      "symbol": "SFP"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27071731
+  },
+  {
+    "feeTier": 100,
+    "address": "0x11bd737757b86c16646313fdf9e86681dd3f065f",
+    "token0": {
+      "decimals": 18,
+      "address": "0x410a56541bd912f9b60943fcb344f1e3d6f09567",
+      "symbol": "BTCMT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27509998
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x9f8ca02962de84a7094c381d66efd46e01c2b8f0",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2ab0e9e4ee70fff1fb9d67031e44f6410170d00e",
+      "symbol": "bXEN"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27028807
+  },
+  {
+    "feeTier": 500,
+    "address": "0xa589248905a5454f379750facfb0b25c329ec287",
+    "token0": {
+      "decimals": 8,
+      "address": "0x2297aebd383787a160dd0d9f71508148769342e3",
+      "symbol": "BTC.b"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28757690
+  },
+  {
+    "feeTier": 500,
+    "address": "0x9474e972f49605315763c296b122cbb998b615cf",
+    "token0": {
+      "decimals": 18,
+      "address": "0xb0b84d294e0c75a6abe60171b70edeb2efd14a1b",
+      "symbol": "SnBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30246614
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x73d69d55893d6c97dca44af2aa85b688c0242d7f",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xd069599e718f963bd84502b49ba8f8657faf5b3a",
+      "symbol": "PLAY"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27309587
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x26db6ab80ef5383abb16dd1fa2fd875d87d9b92e",
+    "token0": {
+      "decimals": 18,
+      "address": "0x50c34995a273075a80c23625f69f40d56ce414de",
+      "symbol": "SELF"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28698011
+  },
+  {
+    "feeTier": 10000,
+    "address": "0xdcff8de46a9bc48eaf65aa59ad404074c13e48b8",
+    "token0": {
+      "decimals": 18,
+      "address": "0x4c3145cb6285eb269c37685e05ff8c6684a70ec7",
+      "symbol": "FTC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29039735
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xbe43e64cd61e0b9207a6bee93e2149317a604326",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0782b6d8c4551b9760e74c0545a9bcd90bdc41e5",
+      "symbol": "HAY"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29526621
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x85bea4fbc57fa22b41fb1632f0d9a6a99390fd0a",
+    "token0": {
+      "decimals": 18,
+      "address": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
+      "symbol": "PENDLE"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29613391
+  },
+  {
+    "feeTier": 500,
+    "address": "0x77b27c351b13dc6a8a16cc1d2e9d5e7f9873702e",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1bdd3cf7f79cfb8edbb955f20ad99211551ba275",
+      "symbol": "BNBx"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27849134
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x503e7bff5c36e2409cabbae9ed6b53c2b24e09f6",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8c912fd6fe2b14c1bb1a19f663aa8afe3008c1cd",
+      "symbol": "XTT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27472950
+  },
+  {
+    "feeTier": 500,
+    "address": "0x61837a8a78f42dc6cfed457c4ec1114f5e2d90f4",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe05a08226c49b636acf99c40da8dc6af83ce5bb3",
+      "symbol": "ankrETH"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27263444
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x3cb75d72401d2dba4349c696824f1397277d6a11",
+    "token0": {
+      "decimals": 18,
+      "address": "0x91d6d6af7635b7b23a8ced9508117965180e2362",
+      "symbol": "USH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27098471
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xb6019a53d6763c95f678748eb45547d93c7d858b",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbabacc135bbf2ce30f9c0f12665b244d3689a29c",
+      "symbol": "COSMIC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27861148
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x66e9acba7c3a82c8ee02faf3e325dd55d6581a8c",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27029754
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x07003daebc432ecec26309ccd1391bbbf06cc890",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xf700d4c708c2be1463e355f337603183d20e0808",
+      "symbol": "GQ"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27340657
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x088464e4e8cc54bf91180cbb8c61c68aecc74166",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xd06716e1ff2e492cc5034c2e81805562dd3b45fa",
+      "symbol": "MGP"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27449640
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xd465d9c13c43003f5b874e0d96a6030336ed50eb",
+    "token0": {
+      "decimals": 18,
+      "address": "0x16faf9daa401aa42506af503aa3d80b871c467a3",
+      "symbol": "DCK"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30127511
+  },
+  {
+    "feeTier": 100,
+    "address": "0xdc6f3fbc1d2f0abe058eb867bbdd367c2d8c2d2a",
+    "token0": {
+      "decimals": 18,
+      "address": "0x36d8d5de808aa7b0b7f543c8b3e25a1fdb09f912",
+      "symbol": "SIZ"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30852860
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xdd15e622185261a7e42398ee9df5ec1849387fd5",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+      "symbol": "DAI"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28134724
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x701396d9b97857dd20ad1cce048d58186573880c",
+    "token0": {
+      "decimals": 18,
+      "address": "0x78a0a62fba6fb21a83fe8a3433d44c73a4017a6f",
+      "symbol": "OX"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29238984
+  },
+  {
+    "feeTier": 500,
+    "address": "0x08737612200de7789bb125238a5aca14190011c0",
+    "token0": {
+      "decimals": 10,
+      "address": "0x2df2a49e0cf2b4faccf089e522eb6d3b63738e2c",
+      "symbol": "TTMP"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30408935
+  },
+  {
+    "feeTier": 500,
+    "address": "0xbe141893e4c6ad9272e8c04bab7e6a10604501a5",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27254278
+  },
+  {
+    "feeTier": 10000,
+    "address": "0xeea445f03a0a9ca3212aa41b6e5b674ab6e8a8c3",
+    "token0": {
+      "decimals": 18,
+      "address": "0x922722e9ef614ec9a3e94b78496e92abfbb5a624",
+      "symbol": "CAPO"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28070233
+  },
+  {
+    "feeTier": 100,
+    "address": "0xc9d5c78e3d54a9019548ad02599d231d922cd68f",
+    "token0": {
+      "decimals": 2,
+      "address": "0x2c8d970d7c8c878db422c4bcd7d2542104ecfa2c",
+      "symbol": "GEZY"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29699083
+  },
+  {
+    "feeTier": 500,
+    "address": "0xbc42221825d19d78a4838e042802ac66f8e43316",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 10,
+      "address": "0xf4a00b788ee6d063559c5982ea9dc405fd9fff63",
+      "symbol": "BMYR"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30294705
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xa9576a53ec0e2f2e3a45ce38852a6a0f21c49239",
+    "token0": {
+      "decimals": 18,
+      "address": "0x510ca7d22a84599e7d0f15f09e674056a6255389",
+      "symbol": "LABS"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27137275
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x58fd8a03779266a34460dd230e58912c3868054f",
+    "token0": {
+      "decimals": 18,
+      "address": "0x14016e85a25aeb13065688cafb43044c2ef86784",
+      "symbol": "TUSD"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28134555
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xd10612a288bd5024db6a47663750996d176130fe",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 6,
+      "address": "0x8b1f4432f943c465a973fedc6d7aa50fc96f1f65",
+      "symbol": "AXL"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27404137
+  },
+  {
+    "feeTier": 500,
+    "address": "0xe53069909217a1a41c830092c690ef8652409f18",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xdb5bcde758e4a4c0a723971742361a19aa77c4ba",
+      "symbol": "NRT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 30203554
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x640ba9794739291826f282fe4bf5136591bc4b53",
+    "token0": {
+      "decimals": 18,
+      "address": "0x545356d4d69d8cd1213ee7e339867574738751ca",
+      "symbol": "KTC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28551268
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x1e4600929edf7f36b4a7eac4c7571057d82a246c",
+    "token0": {
+      "decimals": 18,
+      "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df",
+      "symbol": "SOL"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27343839
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xe3cbe4dd1bd2f7101f17d586f44bab944091d383",
+    "token0": {
+      "decimals": 18,
+      "address": "0x4338665cbb7b2485a8855a139b75d5e34ab0db94",
+      "symbol": "LTC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27048000
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xedb6d7d456a570f790185af9f6b99020cc578ed0",
+    "token0": {
+      "decimals": 18,
+      "address": "0x44a21b3577924dcd2e9c81a3347d204c36a55466",
+      "symbol": "EGO"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29723080
+  },
+  {
+    "feeTier": 2500,
+    "address": "0xbea5d8dd34c479a94aacff4d40661095559021d2",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x859c940f080b197659b3effc804fd622df66f0a1",
+      "symbol": "CAL"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 28226766
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x729c9a7e1f642eab4019dfb0d467f4a9838e7cbd",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe4cc45bb5dbda06db6183e8bf016569f40497aa5",
+      "symbol": "GAL"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27448508
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x6ee3ee9c3395bbd136b6076a70cb6cff241c0e24",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27030105
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x466e7d53e23620a24db23e2b1f8bd10ff52116cd",
+    "token0": {
+      "decimals": 18,
+      "address": "0x04756126f044634c9a0f0e985e60c88a51acc206",
+      "symbol": "CSIX"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27539561
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x86b0b44723c675660caa09bc47486e55c8599544",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe552fb52a4f19e44ef5a967632dbc320b0820639",
+      "symbol": "Metis"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27046377
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x63ca58e7c6bf06b06cbbec2a83bf6aa8f8f9f77b",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 9,
+      "address": "0x37a56cdcd83dce2868f721de58cb3830c44c6303",
+      "symbol": "ZBC"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27649155
+  },
+  {
+    "feeTier": 2500,
+    "address": "0x33dcd5381c0fd234867d5d7a49a19c009f82af4e",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0eb3a705fc54725037cc9e008bdede697f62f335",
+      "symbol": "ATOM"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 27197022
+  },
+  {
+    "feeTier": 500,
+    "address": "0xd5e916a450cdc396bb4176c2ced3347273059f89",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xb2192a2829a5220bafd5b0a67f3328e209887bee",
+      "symbol": "GETA"
+    },
+    "router": "0x13f4EA83D0bd40E75C8222255bc855a974568Dd4",
+    "exchange": "PancakeSwap V3",
+    "creationBlock": 29725195
+  },
+  {
+    "feeTier": 100,
+    "address": "0x47a90a2d92a8367a91efa1906bfc8c1e05bf10c4",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 27130079
+  },
+  {
+    "feeTier": 500,
+    "address": "0x5289a8dbf7029ee0b0498a84777ed3941d9acfec",
+    "token0": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26916398
+  },
+  {
+    "feeTier": 500,
+    "address": "0x28df0835942396b7a1b7ae1cd068728e6ddbbafd",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26491797
+  },
+  {
+    "feeTier": 500,
+    "address": "0x0f338ec12d3f7c3d77a4b9fcc1f95f3fb6ad0ea6",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26495429
+  },
+  {
+    "feeTier": 500,
+    "address": "0x6fe9e9de56356f7edbfcbb29fab7cd69471a4869",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26495967
+  },
+  {
+    "feeTier": 100,
+    "address": "0x4141325bac36affe9db165e854982230a14e6d48",
+    "token0": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 30190820
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x7862d9b4be2156b15d54f41ee4ede2d5b0b455e4",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26350960
+  },
+  {
+    "feeTier": 100,
+    "address": "0xc98f01bf2141e1140ef8f8cad99d4b021d10718f",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26600714
+  },
+  {
+    "feeTier": 3000,
+    "address": "0xb1a1b707b143b911c36e1a0f4f901c5017791aca",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xf486ad071f3bee968384d2e39e2d8af0fcf6fd46",
+      "symbol": "VELO"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 37804077
+  },
+  {
+    "feeTier": 100,
+    "address": "0x2c3c320d49019d4f9a92352e947c7e5acfe47d68",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26350603
+  },
+  {
+    "feeTier": 500,
+    "address": "0xcb99fe720124129520f7a09ca3cbef78d58ed934",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26642327
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x8149b92ea743cc382aada523b68b8834733b9015",
+    "token0": {
+      "decimals": 18,
+      "address": "0x031b41e504677879370e9dbcf937283a8691fa7f",
+      "symbol": "FET"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 28722239
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x3373a22cb07cb49651b82cf6f174ef434e4dbaa8",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xfb6115445bff7b52feb98650c87f44907e58f802",
+      "symbol": "AAVE"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26919240
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x41bf5eeae051fbd2e97b76b5f8f0fdcc1a1e526b",
+    "token0": {
+      "decimals": 18,
+      "address": "0x031b41e504677879370e9dbcf937283a8691fa7f",
+      "symbol": "FET"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26607279
+  },
+  {
+    "feeTier": 3000,
+    "address": "0xfa7d79f971a70771e5e92bd80ab955edc8602f4d",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "symbol": "XRP"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26747394
+  },
+  {
+    "feeTier": 3000,
+    "address": "0xab46d39cb398fb3649ecba781180016fef75f50b",
+    "token0": {
+      "decimals": 18,
+      "address": "0x570a5d26f7765ecb712c0924e4de545b89fd43df",
+      "symbol": "SOL"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 35277646
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x25048028ad87484b7fce99bc4e22dcb6c3307470",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 9,
+      "address": "0xfa54ff1a158b5189ebba6ae130ced6bbd3aea76e",
+      "symbol": "SOL"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 34630436
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x534d3930edba2c0b90a7973549a0287141c987ef",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd",
+      "symbol": "LINK"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26950642
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x913a4ed1636c474e6451b5e9249d94046a24bb33",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+      "symbol": "UNI"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26767790
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x4a978a2d4fb7393063babfb0cee741b8bcd4dd4b",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1fa4a73a3f0133f0025378af00236f3abdee5d63",
+      "symbol": "NEAR"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26673508
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x3319a81a316abd4c086f7048904e31ff86648b38",
+    "token0": {
+      "decimals": 8,
+      "address": "0xba2ae424d960c26247dd6c32edc70b295c744c43",
+      "symbol": "DOGE"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 31504207
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x42d749f736051d8933b118324cded52d1f92bec1",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xf486ad071f3bee968384d2e39e2d8af0fcf6fd46",
+      "symbol": "VELO"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 36630438
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x4c1d39e6b736a6a99105ee2a9e7c44bfc56af860",
+    "token0": {
+      "decimals": 18,
+      "address": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82",
+      "symbol": "Cake"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26491352
+  },
+  {
+    "feeTier": 3000,
+    "address": "0xfd6e5b7c30538dff2752058e425ad01a56b831cc",
+    "token0": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26492183
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x32776ed4d96ed069a2d812773f0ad8ad9ef83cf8",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26491697
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x33e59edd3214e97cb68450c6d3d6c167de072aba",
+    "token0": {
+      "decimals": 18,
+      "address": "0xa2b726b1145a4773f68593cf171187d8ebe4d495",
+      "symbol": "INJ"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26498061
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x06396509195eb9e07c38a016694dc9ff535b128a",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+      "symbol": "BTCB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 27265221
+  },
+  {
+    "feeTier": 3000,
+    "address": "0xbb124e35ab9e85f8d59ba83500e559dc052b9368",
+    "token0": {
+      "decimals": 18,
+      "address": "0x111111111117dc0aa78b770fa6a738034120c302",
+      "symbol": "1INCH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26914440
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x554548b404213c7efcdbab933f52edfe3c581834",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbf5140a22578168fd562dccf235e5d43a02ce9b1",
+      "symbol": "UNI"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26491138
+  },
+  {
+    "feeTier": 100,
+    "address": "0xff3482c7de20f2e57172993ff823d3e83e4644ff",
+    "token0": {
+      "decimals": 18,
+      "address": "0x103071da56e7cd95b415320760d6a0ddc4da1ca5",
+      "symbol": "XTER"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 50466277
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x916d7f23ccbb1d10118dcfc6ad5a10b6446ff73e",
+    "token0": {
+      "decimals": 18,
+      "address": "0xb3ed0a426155b79b898849803e3b36552f7ed507",
+      "symbol": "PENDLE"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 33015232
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x0ab8855c73d567f0ec633cddec43580c5f7e2555",
+    "token0": {
+      "decimals": 18,
+      "address": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47",
+      "symbol": "ADA"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 27029665
+  },
+  {
+    "feeTier": 500,
+    "address": "0xf9878a5dd55edc120fde01893ea713a4f032229c",
+    "token0": {
+      "decimals": 18,
+      "address": "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+      "symbol": "ETH"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26933170
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x48488c63c8559e8226366169df8cec4867dcbf39",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1bfd9766f231cf1ca06392be86383fb31ca49ac6",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 41752713
+  },
+  {
+    "feeTier": 100,
+    "address": "0xac18e282c0b89a9981520e148ddd2bf9592e440c",
+    "token0": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26491751
+  },
+  {
+    "feeTier": 100,
+    "address": "0x0a580a2766280d0bb605c4430cae0d5b9ef5c8b5",
+    "token0": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe6df05ce8c8301223373cf5b969afcb1498c5528",
+      "symbol": "KOGE"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 50328281
+  },
+  {
+    "feeTier": 500,
+    "address": "0x84e47c7f2fe86f6b5efbe14fee46b8bb871b2e05",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+      "symbol": "BUSD"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26490869
+  },
+  {
+    "feeTier": 10000,
+    "address": "0x4d170f8714367c44787ae98259ce8adb72240067",
+    "token0": {
+      "decimals": 18,
+      "address": "0x55d398326f99059ff775485246999027b3197955",
+      "symbol": "USDT"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26505441
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x329eeb1a58bdb3b804d1f94623c7a29a67a9b6b7",
+    "token0": {
+      "decimals": 18,
+      "address": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe",
+      "symbol": "XRP"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26867615
+  },
+  {
+    "feeTier": 3000,
+    "address": "0x6bcb0ba386e9de0c29006e46b2f01f047ca1806e",
+    "token0": {
+      "decimals": 18,
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "symbol": "USDC"
+    },
+    "token1": {
+      "decimals": 18,
+      "address": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c",
+      "symbol": "WBNB"
+    },
+    "router": "0xB971eF87ede563556b2ED4b1C0b0019111Dd85d2",
+    "exchange": "Uniswap V3",
+    "creationBlock": 26340146
+  }
+]
