@@ -3,6 +3,7 @@ use std::sync::Arc;
 use alloy::consensus::{Transaction, transaction::SignerRecoverable};
 use reth_eth_wire::PooledTransactions;
 use reth_network::{EthNetworkPrimitives, transactions::NetworkTransactionEvent};
+use reth_network_peers::PeerId;
 use tokio::{
     sync::{
         broadcast::{self, error::RecvError},
@@ -80,7 +81,7 @@ impl Node {
 
             NetworkTransactionEvent::IncomingPooledTransactionHashes { peer_id, msg } => {
                 // Peer announced tx hashes — you can request full txs if interested
-                println!("📋 {} pooled tx hashes from {}", msg.len(), peer_id);
+                println!("📋 {} pooled tx hashes from {}", msg.len(), short_id(&peer_id));
                 // TODO: filter for txs to watched pools, request full txs
             }
 
@@ -109,7 +110,7 @@ impl Node {
                 };
                 println!(
                     "✓ peer connected | id={} eth={:?} client={:?} connected_peers={}",
-                    peer.id, peer.eth_version, peer.client_version, num_peers
+                    short_id(&peer.id), peer.eth_version, peer.client_version, num_peers
                 );
 
                 self.handle_pool_sync().await;
@@ -122,7 +123,7 @@ impl Node {
                 };
                 println!(
                     "✗ peer disconnected | id={} eth={:?} client={:?} connected_peers={} reason={}",
-                    peer.id,
+                    short_id(&peer.id),
                     peer.eth_version,
                     peer.client_version,
                     num_peers,
@@ -130,27 +131,6 @@ impl Node {
                 );
             }
 
-            // Ok(ManagerEvent::NewBlock(block_event)) => {
-            //     // If NewBlock expects a different processing path, handle it.
-            //     let evt = block_event.as_ref();
-            //     match evt {
-            //         NewBlockEvent::Block(message) => {
-            //             println!(
-            //                 "⛏ new block (from peer) | number={} hash={}",
-            //                 message.number(), message.hash
-            //             );
-
-            //             let this = Arc::clone(&self);
-            //             // clone block_event or otherwise move it appropriately
-            //             let block_evt = block_event.clone();
-            //             task::spawn(async move {
-            //                 this.handle_new_block(*block_evt).await;
-            //             });
-            //         }
-            //         _ => {
-            //         }
-            //     }
-            // }
             Err(RecvError::Lagged(n)) => {
                 eprintln!("warn: peer events receiver lagged, skipped {n} events");
             }
@@ -190,4 +170,9 @@ impl Node {
             }
         }
     }
+}
+
+fn short_id(id: &PeerId) -> String {
+    let s = format!("{id:x}"); // lowercase hex, no 0x prefix
+    format!("{}…{}", &s[..8], &s[s.len() - 8..])
 }

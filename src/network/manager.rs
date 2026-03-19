@@ -25,7 +25,7 @@
 //! }
 //! ```
 
-use std::collections::HashMap;
+use std::{collections::HashMap, sync::Arc};
 
 use alloy::primitives::B256;
 use futures::StreamExt;
@@ -53,6 +53,7 @@ use crate::{
     error::AppError,
     network::{
         chainspec::{bootnodes, bsc_chain_spec, head},
+        handshake::BscHandshake,
         peer::{Peer, PeerError, PeerInfo},
     },
 };
@@ -367,20 +368,13 @@ pub async fn start_network() -> Result<
     ),
     AppError,
 > {
+    // from https://github.com/bnb-chain/reth/blob/main/examples/bsc-p2p/src/main.rs
     let config = NetworkConfig::<_, EthNetworkPrimitives>::builder(rng_secret_key())
         .boot_nodes(bootnodes())
         .set_head(head())
+        .with_pow() // BSC is PoA — disables PoS/merge caps
+        .eth_rlpx_handshake(Arc::new(BscHandshake::default())) // BSC UpgradeStatus exchange
         .build(NoopProvider::eth(bsc_chain_spec()));
-
-    // from https://github.com/bnb-chain/reth/blob/main/examples/bsc-p2p/src/main.rs
-    // let secret_key = SecretKey::new(&mut secp256k1::rand::rng());
-    // let config = NetworkConfig::builder(secret_key)
-    //     .boot_nodes(bootnodes())
-    //     .set_head(head())
-    //     .with_pow()
-    //     .listener_addr(SocketAddr::new(Ipv4Addr::UNSPECIFIED.into(), 30303))
-    //     .eth_rlpx_handshake(Arc::new(BscHandshake::default()))
-    //     .build(NoopProvider::eth(bsc_chain_spec()));
 
     let manager = NetworkManager::new(config)
         .await
