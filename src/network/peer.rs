@@ -1,5 +1,3 @@
-//! Peer connection and discovery logic.
-
 use std::{net::SocketAddr, sync::Arc, time::Instant};
 
 use alloy::primitives::B256;
